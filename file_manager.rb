@@ -10,7 +10,7 @@ class FileManager
 	@data_rows = []
 
 	def initialize
-		raise NotImplementedError, 'Abstract class cannot be instantiated'
+		raise NotImplementedError
 	end
 
 	def update_tasks_from_file
