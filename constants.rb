@@ -5,4 +5,8 @@ module Constants
 	DEFAULT_FILE_INPUT_PATH = ''
 	DEFAULT_FILE_OUTPUT_PATH = ''
 	RESULT = "The result of the selected tasks is written to a file: #{DEFAULT_FILE_OUTPUT_PATH}".freeze
+	FILE_NOT_FOUND = "#{ERROR} File not found. #{STANDART_SET}".freeze
+	FILE_NOT_READABLE = "#{ERROR} File not readable. #{STANDART_SET}".freeze
+	FILE_BROKEN = "#{ERROR} This file structure is broken. #{STANDART_SET}".freeze
+	FILE_NOT_WRITABLE = "#{ERROR} This file is not writable. #{STANDART_SET}".freeze
 end
