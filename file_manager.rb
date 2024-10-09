@@ -4,29 +4,13 @@ require 'csv'
 
 # An abstract class for managing file tasks
 class FileManager
+	@file_path = file_path
+	@output_file_path = output_file_path
+	@total_resources = 0
+	@data_rows = []
+
 	def initialize
 		raise NotImplementedError, 'Abstract class cannot be instantiated'
-	end
-
-	def update_tasks_from_file
-		raise NotImplementedError, 'Method not implemented in subclass'
-	end
-
-	def write_tasks_to_file(max_sum_priority, managed_task_list)
-		raise NotImplementedError, 'Method not implemented in subclass'
-	end
-end
-
-# Class that inherits the abstract FileManager and implements the methods
-class TaskFileManager < FileManager
-	attr_reader :total_resources, :data_rows
-
-	def initialize
-		super
-		@file_path = 'task.txt'
-		@output_file_path = 'managed_tasks.csv'
-		@total_resources = 0
-		@data_rows = []
 	end
 
 	def update_tasks_from_file
